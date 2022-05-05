@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-dark{
+    background-color: rgb(51, 51, 51);
+    height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+
+}
+
+.container{
+    margin: auto 50px;
+}
+
+.navbar-dark .container a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.col-md-4{
+    display: flex;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.alert{
+    width: 250px;
+    height: 35px;
+    border-radius: 3px;
+    background-color: #fff18a;
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.btn-close {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: #fff18a; 
+}
+
+.card{
+    width: 250px;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 3px;
+    margin-right: 25px;
+    padding: 15px;
+    font-family: 'calibri';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.form-control{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 3px;
+    margin-bottom: 5px;
+    font-family: 'calibri';
+    font-size: 15px;
+}
+
+.form-control:focus{
+    outline: none !important;
+    border-color: #91d9ff;
+    box-shadow: 0 0 10px #91d9ff;
+}
+
+.btn{
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid rgb(202, 202, 202);
+    padding: 5px;
+   color: #fff;
+   font-size: 15px;
+}
+
+.btn-success {
+    background-color: rgb(14, 151, 64);
+}
+
+.contenedor-tabla{
+    width: 50em;
+}
+
+.contenedor-tabla .table{
+    border-collapse: collapse;
+    width: 40em;
+}
+
+.contenedor-tabla .table th,
+.contenedor-tabla .table td{
+    text-align: center;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+.contenedor-tabla .table .titulo{
+    width: 10em;
+    height: 2em;
+}
+
+.contenedor-tabla .table .descripcion{
+    width: 15em;
+    height: 5em;
+    
+    
+}
+
+.contenedor-tabla .table .fecha{
+    width: 10em;
+}
+
+.contenedor-tabla .table .acciones{
+    width: 4em;
+}
+
+.btn-secondary{
+    background:rgb(107, 107, 107);
+}
+
+.btn-danger{
+    background: #dd1111;
+}
