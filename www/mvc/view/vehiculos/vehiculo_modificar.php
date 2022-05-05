@@ -12,13 +12,6 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.php?controller=vehiculos&accion=nuevo">Agregar</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Pricing</a>
-        </li>
-        
       </ul>
     </div>
   </div>

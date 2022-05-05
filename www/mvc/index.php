@@ -4,11 +4,8 @@
     require_once "core/rutas.php";
     require_once "base/bd.php";
     require_once "controler/VehiculosControlador.php";
+    require_once "controler/EmpleadosControlador.php";
 
-    /*
-    $control = new VehiculosControlador();
-    $control->index();
-    */
 
     
     if (isset($_GET['controller'])) {
@@ -26,9 +23,8 @@
         }
         
     }else {
-        
         $controlador = cargarControlador(CONTROLADOR_PRINCIPAL); 
-        cargarAccion(CONTROLADOR_PRINCIPAL, ACCION_PRINCIPAL);
+        cargarAccion($controlador, ACCION_PRINCIPAL);
     } 
  
 ?>

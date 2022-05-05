@@ -42,7 +42,7 @@
 
         public function get_vehiculo($id){
             
-            $sql = "SELECT * FROM vehiculos WHERE id='$id'";
+            $sql = "SELECT * FROM vehiculos WHERE id='$id' LIMIT 1";
             $resultado = $this->db->query($sql);
             $row = $resultado->fetch_assoc();
             return $row;

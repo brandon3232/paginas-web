@@ -1,6 +1,6 @@
 <?php
 
-    define("CONTROLADOR_PRINCIPAL","Vehiculos");
+    define("CONTROLADOR_PRINCIPAL","vehiculos");
     define("ACCION_PRINCIPAL","index");
 
 ?>
