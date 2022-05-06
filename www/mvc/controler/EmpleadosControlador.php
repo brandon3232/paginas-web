@@ -15,22 +15,26 @@
 
         }
 
-        public function nuevo(){
-            $data['titulo'] = "Empleados";
-            require_once "view/empleados/empleado_nuevo.php";
-        }
-
         public function guarda(){
-
-            $nombre = $_POST['Nombre'];
-            $edad = $_POST['Edad'];
             
+            if (isset($_POST['guardar']) && !empty($_POST['Nombre'] && !empty($_POST['Edad']))) {
+                
+                $nombre = $_POST['Nombre'];
+                $edad = $_POST['Edad'];
+    
+                $empleados = new Empleados_model();
+                $empleados->insertar($nombre, $edad);
+    
+                $_SESSION['mensaje'] = "persona agregada correctamente";
+                $_SESSION['tipo_mensaje'] = "success";
 
-            $empleados = new Empleados_model();
-            $empleados->insertar($nombre, $edad);
-
-            $data['titulo'] = "Empleados";
-            $this->index();
+                $data['titulo'] = "Empleados";
+                $this->index();
+            }else{
+                $_SESSION['mensaje'] = "Hay campos vacios";
+                $_SESSION['tipo_mensaje'] = "danger";
+                $this->index();
+            }
         }
 
         public function modificar($id){
@@ -56,6 +60,10 @@
         public function eliminar($id){
             $empleados = new Empleados_model();
             $empleados->eliminar($id);
+
+            $_SESSION['mensaje'] = "Empleado eliminado";
+            $_SESSION['tipo_mensaje'] = "danger";
+
             $this->index();
         }
     }

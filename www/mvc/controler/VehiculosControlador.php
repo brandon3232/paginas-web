@@ -15,24 +15,30 @@
 
         }
 
-        public function nuevo(){
-            $data['titulo'] = "Vehiculos";
-            require_once "view/vehiculos/vehiculo_nuevo.php";
-        }
-
         public function guarda(){
 
-            $placa = $_POST['Placa'];
-            $marca = $_POST['Marca'];
-            $modelo = $_POST['Modelo'];
-            $anio = $_POST['Anio'];
-            $color = $_POST['Color'];
+            if (isset($_POST['guardar']) && !empty($_POST['Placa'] && !empty($_POST['Marca']) && !empty($_POST['Modelo']) && !empty($_POST['Anio']) && !empty($_POST['Color']))) {
 
-            $vehiculos = new Vehiculos_model();
-            $vehiculos->insertar($placa, $marca, $modelo, $anio, $color);
+                $placa = $_POST['Placa'];
+                $marca = $_POST['Marca'];
+                $modelo = $_POST['Modelo'];
+                $anio = $_POST['Anio'];
+                $color = $_POST['Color'];
+    
+                $vehiculos = new Vehiculos_model();
+                $vehiculos->insertar($placa, $marca, $modelo, $anio, $color);
+    
+                $_SESSION['mensaje'] = "Vehiculo agregada correctamente";
+                $_SESSION['tipo_mensaje'] = "success";
 
-            $data['titulo'] = "Vehiculos";
-            $this->index();
+                $data['titulo'] = "Vehiculos";
+                $this->index();
+            }else {
+                $_SESSION['mensaje'] = "Hay campos vacios";
+                $_SESSION['tipo_mensaje'] = "danger";
+                $this->index();
+            }
+
         }
 
         public function modificar($id){
