@@ -1,0 +1,29 @@
+.contenedor{ 
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.img-vehiculos{ 
+    background-image: url("../imagenes/img-vehiculos.jpg");
+}
+
+.img-trabajadores{ 
+    background-image: url("../imagenes/img-empleados.jpg");
+}
+
+.img{ 
+    width: 350px;
+    height: 350px;
+    margin: 0 15px ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.img:hover{
+    transform: scale(1.05);
+}

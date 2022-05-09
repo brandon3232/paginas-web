@@ -53,6 +53,9 @@
             $empleados = new Empleados_model();
             $empleados->actualizar($id, $nombre, $edad);
 
+            $_SESSION['mensaje'] = "Empleado actualizado";
+            $_SESSION['tipo_mensaje'] = "success";
+
             $data['titulo'] = "Empleados";
             $this->index();
         }
