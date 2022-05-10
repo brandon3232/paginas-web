@@ -23,10 +23,7 @@
         }
         
     }else {
-        //$controlador = cargarControlador(CONTROLADOR_PRINCIPAL); 
-        //cargarAccion($controlador, ACCION_PRINCIPAL);
-
-            require_once "view/menu.php";
+            require_once "view/login.php";
     } 
  
 ?>
