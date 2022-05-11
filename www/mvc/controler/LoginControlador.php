@@ -12,11 +12,11 @@
             $user = $_POST['Nombre'];
             $password = $_POST['Password'];
 
-
             $usuario = new Login_model();
             $data = $usuario->get_user($user, $password);
 
             if ($data >= 1) {
+                echo "estamos en LoginModel";
                 require_once "view/menu.php";
             }else {
                 
